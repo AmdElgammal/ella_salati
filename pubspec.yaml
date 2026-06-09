@@ -1,0 +1,78 @@
+﻿name: ella_salati
+description: إلا صلاتي - تطبيق أوقات الصلاة
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # أوقات الصلاة
+  adhan:
+    path: packages/adhan
+
+  # التاريخ الهجري
+  hijri:
+    path: packages/hijri
+
+  # طلبات HTTP (الطقس والتاريخ الهجري)
+  http: ^1.6.0
+
+  # حفظ الإعدادات
+  shared_preferences:
+    path: packages/shared_preferences
+
+  # إشعارات الأذان
+  flutter_local_notifications:
+    path: packages/flutter_local_notifications
+
+  # تشغيل صوت الأذان
+  audioplayers:
+    path: packages/audioplayers
+
+  # الموقع الجغرافي التلقائي
+  geolocator:
+    path: packages/geolocator
+
+  # تنسيق التواريخ
+  intl:
+    path: packages/intl
+
+  # timezone
+  timezone: ^0.9.4
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/adhan.mp3
+    - assets/calendar.png
+    - assets/clock.png
+    - assets/moon.png
+    - assets/sun.png
+    - assets/mosque.png
+    - assets/weather.png
+
+  fonts:
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoNaskhArabic-Bold.ttf
+          weight: 700
+
+dependency_overrides:
+  audioplayers_android:
+    path: packages/audioplayers_android
+  geolocator_android:
+    path: packages/geolocator_android
