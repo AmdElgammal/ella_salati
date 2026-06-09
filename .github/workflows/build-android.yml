@@ -22,8 +22,9 @@ jobs:
       - name: Install Flutter
         uses: flutter-actions/setup-flutter@v1
         with:
-          sdk: flutter
-          version: stable
+          channel: stable
+          version: latest
+          cache: true
 
       - name: Flutter pub get
         run: flutter pub get
